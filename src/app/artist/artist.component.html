@@ -1,0 +1,14 @@
+<a routerLink = "/"> < back </a>
+
+<h2>
+  Add New Artist
+</h2>
+
+<form id = "formNewArtist" name = "formNewArtist" #artistData = "ngForm" (ngSubmit) = "addNewArtist(artistData.value)">
+  <label>Name: </label><input type = "text" name="_id" id="_id" placeholder="name" ngModel><br>
+  <label>Color: </label><input type = "text" name="artistName" id="artistName" placeholder="color" ngModel><br>
+  <input type="submit" value = "Add Artist">
+</form>
+
+<br>
+

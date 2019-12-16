@@ -1,0 +1,33 @@
+<a routerLink="/artist">Add Artist</a>
+<h1>Artists</h1>
+
+<!-- <table>
+  <th>id</th>
+  <th>artistName</th>
+
+  <tr *ngFor = "let artist of artists">
+    <td>{{artist.id}}</td>
+    <td>{{artist.id}}</td>
+
+  </tr>
+
+</table>    -->
+
+<ul *ngFor = "let artist of artists">
+  <li>{{artist.id}}</li>
+  <li>{{artist.artistName}}</li>
+
+  <span *ngIf="artist.address">
+  <li >Street:{{artist.address.street}}</li>
+  <li >city:{{artist.address.city}}</li>
+  <li >state:{{artist.address.state}}</li>
+  <li >country:{{artist.address.country}}</li>
+  </span>
+
+  <ul *ngFor = "let album of artist.albums">
+      <li >Album:{{album.albumName}}</li>
+      <li >Album:{{album.albumyear}}</li>
+      <li >Album:{{album.genre}}</li>
+
+  </ul>
+</ul>
